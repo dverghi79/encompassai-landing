@@ -235,6 +235,50 @@
     .founder-booking-badge{ position:fixed; bottom:24px; right:24px; z-index:9999; display:flex; align-items:center; gap:8px; padding:12px 20px; background:rgba(17,17,19,0.9); color:#fff; border:1px solid var(--border); border-radius:14px; cursor:pointer; font-family:inherit; font-size:14px; font-weight:600; box-shadow:0 8px 32px rgba(0,0,0,0.4); transition:all 0.3s; text-decoration:none; backdrop-filter:blur(12px); }
     .founder-booking-badge:hover{ transform:translateY(-2px); box-shadow:0 12px 40px rgba(0,0,0,0.5); border-color:rgba(56,189,248,0.2); color:#fff; }
     .founder-booking-badge svg{ width:18px; height:18px; flex-shrink:0; }
+    /* AHA MOMENT MORPHING ANIMATION */
+    .aha-wrap{max-width:900px;margin:0 auto;border-radius:16px;overflow:hidden;border:1px solid var(--border);box-shadow:0 20px 60px rgba(0,0,0,0.5);background:#111113;}
+    .aha-chrome{background:#161618;padding:0.6rem 1rem;display:flex;align-items:center;gap:0.75rem;border-bottom:1px solid var(--border);}
+    .aha-dots span{width:8px;height:8px;border-radius:50%;display:inline-block;margin-right:4px;}
+    .aha-status{margin-left:auto;font-family:'JetBrains Mono',monospace;font-size:0.7rem;font-weight:600;padding:0.3rem 0.75rem;border-radius:8px;transition:all 0.6s ease;}
+    .aha-status.pain{background:rgba(239,68,68,0.12);color:#ef4444;}
+    .aha-status.syncing{background:rgba(168,85,247,0.12);color:#a855f7;}
+    .aha-status.done{background:rgba(34,197,94,0.12);color:#22c55e;}
+    .aha-body{padding:1.5rem 1.5rem 1rem;position:relative;}
+    .aha-caption{text-align:center;padding:0.75rem 0 1rem;font-size:1.1rem;font-weight:700;transition:all 0.5s ease;min-height:2.5rem;}
+    .aha-form{display:grid;grid-template-columns:1fr 1fr;gap:0.6rem;transition:all 0.8s ease;}
+    .aha-field{padding:0.6rem 0.75rem;border-radius:8px;font-size:0.75rem;font-family:'JetBrains Mono',monospace;transition:all 0.8s ease;position:relative;overflow:hidden;}
+    .aha-field-label{font-size:0.55rem;font-weight:600;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:0.3rem;transition:color 0.6s ease;}
+    .aha-field-value{font-size:0.8rem;font-weight:500;transition:color 0.6s ease;}
+    .aha-field.full{grid-column:1/-1;}
+    .aha-form.state-pain .aha-field{background:rgba(239,68,68,0.06);border:1px solid rgba(239,68,68,0.2);}
+    .aha-form.state-pain .aha-field-label{color:rgba(239,68,68,0.6);}
+    .aha-form.state-pain .aha-field-value{color:var(--text-muted);}
+    .aha-form.state-pain .aha-field.has-error{border-color:#ef4444;box-shadow:0 0 0 1px rgba(239,68,68,0.3);}
+    .aha-form.state-pain .aha-field.has-error .aha-field-value{color:#ef4444;text-decoration:line-through;}
+    .aha-form.state-syncing .aha-field{background:rgba(168,85,247,0.05);border:1px solid rgba(168,85,247,0.15);}
+    .aha-form.state-syncing .aha-field-label{color:rgba(168,85,247,0.6);}
+    .aha-form.state-syncing .aha-field-value{color:#a855f7;}
+    .aha-form.state-done .aha-field{background:rgba(34,197,94,0.05);border:1px solid rgba(34,197,94,0.18);}
+    .aha-form.state-done .aha-field-label{color:rgba(34,197,94,0.6);}
+    .aha-form.state-done .aha-field-value{color:var(--text-primary);}
+    .aha-form.state-done .aha-field.has-error{border-color:rgba(34,197,94,0.18);box-shadow:none;}
+    .aha-form.state-done .aha-field.has-error .aha-field-value{color:var(--text-primary);text-decoration:none;}
+    .aha-scan{height:2px;background:transparent;margin:0.75rem 0 0;border-radius:2px;overflow:hidden;position:relative;}
+    .aha-scan-bar{position:absolute;top:0;left:0;width:0;height:100%;border-radius:2px;transition:width 1.2s ease-in-out;}
+    .aha-timer-strip{display:flex;align-items:center;justify-content:center;gap:0.5rem;margin-top:0.75rem;padding:0.5rem 0;font-family:'JetBrains Mono',monospace;font-size:0.75rem;transition:all 0.5s ease;min-height:2rem;}
+    @media (max-width:600px){.aha-form{grid-template-columns:1fr;}}
+    /* ── Logical Closer ── */
+    .closer-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;max-width:900px;margin:0 auto;}
+    .closer-card{border-radius:16px;padding:2rem 1.75rem;}
+    .closer-card-old{background:rgba(239,68,68,0.03);border:1px solid rgba(239,68,68,0.12);}
+    .closer-card-new{background:rgba(34,197,94,0.03);border:1px solid rgba(34,197,94,0.15);}
+    .closer-label{font-size:0.7rem;font-weight:600;text-transform:uppercase;letter-spacing:0.1em;font-family:'JetBrains Mono',monospace;margin-bottom:1.5rem;display:flex;align-items:center;gap:0.5rem;}
+    .closer-item{display:flex;align-items:flex-start;gap:0.75rem;margin-bottom:1.15rem;}
+    .closer-item:last-child{margin-bottom:0;}
+    .closer-icon{width:26px;height:26px;border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px;}
+    .closer-icon-x{background:rgba(239,68,68,0.1);}
+    .closer-icon-check{background:rgba(34,197,94,0.1);}
+    @media (max-width:768px){.closer-grid{grid-template-columns:1fr;gap:1rem;}}
   </style>
 </head>
 <body>
@@ -427,6 +471,59 @@
           </div>
           <div class="stat-number" style="margin-bottom:0.4rem;"><span class="counter" data-target="2" data-suffix=".3s">0</span></div>
           <p style="font-size:0.9rem;color:var(--text-muted);margin:0;">Avg processing time</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- AHA MOMENT MORPHING ANIMATION -->
+  <section style="padding:4rem 0;">
+    <div class="container">
+      <p class="section-label reveal">Watch what changes</p>
+      <h2 class="reveal section-title" style="margin-bottom:2.5rem;">
+        AI reads documents. Fields populate. <span class="gradient-text">Loans move forward.</span>
+      </h2>
+      <div class="reveal-scale">
+        <div class="aha-wrap">
+          <div class="aha-chrome">
+            <div class="aha-dots">
+              <span style="background:#ef4444;"></span>
+              <span style="background:#fbbf24;"></span>
+              <span style="background:#22c55e;"></span>
+            </div>
+            <span style="font-size:0.7rem;color:var(--text-muted);">encompassai.app — Loan File Processing</span>
+            <div class="aha-status pain" id="ahaStatus">KEYING</div>
+          </div>
+          <div class="aha-body">
+            <div class="aha-caption" id="ahaCaption">New loan file. 120+ Encompass fields to key in manually.</div>
+            <div class="aha-form state-pain" id="ahaForm">
+              <div class="aha-field">
+                <div class="aha-field-label">Borrower</div>
+                <div class="aha-field-value">Retyped from 1003 — wrong SSN</div>
+              </div>
+              <div class="aha-field">
+                <div class="aha-field-label">Income Docs</div>
+                <div class="aha-field-value">W-2s scattered across email threads</div>
+              </div>
+              <div class="aha-field">
+                <div class="aha-field-label">Property</div>
+                <div class="aha-field-value">Appraisal PDF — manually keyed</div>
+              </div>
+              <div class="aha-field">
+                <div class="aha-field-label">Credit</div>
+                <div class="aha-field-value">Pulled separately — forgot tri-merge</div>
+              </div>
+              <div class="aha-field full">
+                <div class="aha-field-label">Encompass Sync</div>
+                <div class="aha-field-value">120+ fields typed by hand</div>
+              </div>
+              <div class="aha-field full">
+                <div class="aha-field-label">Pipeline</div>
+                <div class="aha-field-value">18 loans in process — 3 stale</div>
+              </div>
+            </div>
+            <div class="aha-timer-strip" id="ahaTimer">⏱ 45 minutes per loan file — error-prone</div>
+          </div>
         </div>
       </div>
     </div>
@@ -679,6 +776,78 @@
     </div>
   </section>
 
+  <!-- LOGICAL CLOSER: OLD WAY VS NEW WAY -->
+  <section style="padding:4rem 0;">
+    <div class="container">
+      <p class="section-label reveal">The shift</p>
+      <h2 class="reveal section-title" style="margin-bottom:3rem;">
+        From <span style="color:#ef4444;">manual keying</span> to <span class="gradient-text">AI-powered extraction.</span>
+      </h2>
+      <div class="closer-grid">
+        <div class="closer-card closer-card-old reveal reveal-delay-1">
+          <div class="closer-label">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="#ef4444" opacity="0.4"><circle cx="12" cy="12" r="10"/><line x1="8" y1="12" x2="16" y2="12" stroke="#ef4444" stroke-width="2"/></svg>
+            The Old Way
+          </div>
+          <div class="closer-item">
+            <div class="closer-icon closer-icon-x">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#ef4444" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+            </div>
+            <p style="margin:0;font-size:0.9rem;color:var(--text-secondary);line-height:1.5;">Manually key 120+ fields from paper docs into Encompass</p>
+          </div>
+          <div class="closer-item">
+            <div class="closer-icon closer-icon-x">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#ef4444" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+            </div>
+            <p style="margin:0;font-size:0.9rem;color:var(--text-secondary);line-height:1.5;">Re-type borrower data from 1003, W-2s, and appraisals</p>
+          </div>
+          <div class="closer-item">
+            <div class="closer-icon closer-icon-x">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#ef4444" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+            </div>
+            <p style="margin:0;font-size:0.9rem;color:var(--text-secondary);line-height:1.5;">Catch data-entry errors only when underwriting kicks it back</p>
+          </div>
+          <div class="closer-item">
+            <div class="closer-icon closer-icon-x">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#ef4444" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+            </div>
+            <p style="margin:0;font-size:0.9rem;color:var(--text-secondary);line-height:1.5;">45+ minutes per file just on data entry</p>
+          </div>
+        </div>
+        <div class="closer-card closer-card-new reveal reveal-delay-2">
+          <div class="closer-label">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="#22c55e" opacity="0.4"><circle cx="12" cy="12" r="10"/><polyline points="16 12 12 8 8 12" stroke="#22c55e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            EncompassAI
+          </div>
+          <div class="closer-item">
+            <div class="closer-icon closer-icon-check">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+            </div>
+            <p style="margin:0;font-size:0.9rem;color:var(--text-secondary);line-height:1.5;">AI reads loan docs and auto-populates all Encompass fields</p>
+          </div>
+          <div class="closer-item">
+            <div class="closer-icon closer-icon-check">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+            </div>
+            <p style="margin:0;font-size:0.9rem;color:var(--text-secondary);line-height:1.5;">Income, assets, and property data extracted with 99%+ accuracy</p>
+          </div>
+          <div class="closer-item">
+            <div class="closer-icon closer-icon-check">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+            </div>
+            <p style="margin:0;font-size:0.9rem;color:var(--text-secondary);line-height:1.5;">Built-in validation catches mismatches before submission</p>
+          </div>
+          <div class="closer-item">
+            <div class="closer-icon closer-icon-check">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+            </div>
+            <p style="margin:0;font-size:0.9rem;color:var(--text-secondary);line-height:1.5;">Loan files complete in 3 minutes — processors handle 3x volume</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- WAITLIST / CTA SECTION -->
   <section id="waitlist" class="accent-section">
     <div class="container">
@@ -914,6 +1083,115 @@
       }
       return false;
     }
+
+    // AHA MOMENT MORPHING ANIMATION
+    (function() {
+      const statusEl = document.getElementById('ahaStatus');
+      const captionEl = document.getElementById('ahaCaption');
+      const formEl = document.getElementById('ahaForm');
+      const timerEl = document.getElementById('ahaTimer');
+      if (!statusEl || !captionEl || !formEl || !timerEl) return;
+
+      const captions = {
+        pain: 'New loan file. 120+ Encompass fields to key in manually.',
+        syncing: 'EncompassAI reading documents and populating fields…',
+        done: '127 fields populated. Loan file complete. 3 minutes.'
+      };
+
+      const timers = {
+        pain: '⏱ 45 minutes per loan file — error-prone',
+        syncing: '⟳ Reading W-2 · 1003 · appraisal · credit…',
+        done: '✓ 127 fields populated · 99.2% accuracy · ready for UW'
+      };
+
+      const fieldUpdates = {
+        pain: {
+          'Borrower': 'Retyped from 1003 — wrong SSN',
+          'Income Docs': 'W-2s scattered across email threads',
+          'Property': 'Appraisal PDF — manually keyed',
+          'Credit': 'Pulled separately — forgot tri-merge',
+          'Encompass Sync': '120+ fields typed by hand',
+          'Pipeline': '18 loans in process — 3 stale'
+        },
+        syncing: {
+          'Borrower': 'Extracting from 1003 · verifying…',
+          'Income Docs': 'Reading W-2s · checking AGI…',
+          'Property': 'Scanning appraisal · pulling values…',
+          'Credit': 'Fetching bureau data · merging…',
+          'Encompass Sync': 'Processing 127 fields…',
+          'Pipeline': 'Analyzing 18 loan files…'
+        },
+        done: {
+          'Borrower': 'James & Linda Chen · Joint Application',
+          'Income Docs': 'W-2 verified · $142,500 AGI · 2 years',
+          'Property': '742 Oak Lane · $485,000 · Appraisal uploaded',
+          'Credit': 'Tri-merge pulled · 748/762/755 · DTI 32%',
+          'Encompass Sync': '127 fields auto-populated · Encompass synced',
+          'Pipeline': '18 loans · avg 22-day close · zero stale files'
+        }
+      };
+
+      function setState(state) {
+        statusEl.className = 'aha-status ' + state;
+        statusEl.textContent = state === 'pain' ? 'KEYING' : state === 'syncing' ? 'READING' : 'POPULATED';
+        captionEl.textContent = captions[state];
+        timerEl.textContent = timers[state];
+        formEl.className = 'aha-form state-' + state;
+
+        const fields = formEl.querySelectorAll('.aha-field');
+        fields.forEach(function(field) {
+          const label = field.querySelector('.aha-field-label').textContent;
+          const valueEl = field.querySelector('.aha-field-value');
+          const newValue = fieldUpdates[state][label];
+          if (newValue) {
+            valueEl.textContent = newValue;
+            field.classList.remove('has-error');
+            if (state === 'pain' && label === 'Encompass Sync') {
+              field.classList.add('has-error');
+            }
+          }
+        });
+
+        if (state === 'syncing') {
+          const scanEl = document.querySelector('.aha-scan-bar');
+          if (!scanEl) {
+            const scanContainer = document.createElement('div');
+            scanContainer.className = 'aha-scan';
+            const bar = document.createElement('div');
+            bar.className = 'aha-scan-bar';
+            bar.style.background = '#a855f7';
+            scanContainer.appendChild(bar);
+            formEl.after(scanContainer);
+            setTimeout(function() { bar.style.width = '100%'; }, 50);
+          }
+        } else {
+          const scanContainer = document.querySelector('.aha-scan');
+          if (scanContainer) scanContainer.remove();
+        }
+      }
+
+      function animate() {
+        setState('pain');
+        setTimeout(function() { setState('syncing'); }, 3000);
+        setTimeout(function() { setState('done'); }, 5500);
+        setTimeout(animate, 9000);
+      }
+
+      if ('IntersectionObserver' in window) {
+        const ahaWrap = document.querySelector('.aha-wrap');
+        const observer = new IntersectionObserver(function(entries) {
+          entries.forEach(function(entry) {
+            if (entry.isIntersecting && !window.ahaAnimating) {
+              window.ahaAnimating = true;
+              animate();
+            }
+          });
+        }, { threshold: 0.3 });
+        observer.observe(ahaWrap);
+      } else {
+        animate();
+      }
+    })();
   </script>
 
   <a class="founder-booking-badge" id="floating-booking" href="#" onclick="openCalendly(event)">
